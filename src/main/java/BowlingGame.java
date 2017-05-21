@@ -1,11 +1,11 @@
 public class BowlingGame {
     public int getBowlingScore(String bowlingCode) {
-       String res = bowlingCode.replaceAll("\\|", " ");
-       cores = res.split("\\s+");
       int sum = 0;
-
-		int len = cores.length;
-		int[][] scores = createFrame(len, cores);
+	    
+	String res = bowlingCode.replaceAll("\\|", " ");
+       String[] cores = res.split("\\s+");
+	int len = cores.length;
+	int[][] scores = createFrame(len, cores);
 
 		for (int m = 0; m < (len == 10 ? len : len - 1); m++) {
 			if (cores[m].length() == 1) {
